@@ -3,6 +3,7 @@
 ## Descripción 🏝
 
 Este es un proyecto creado con pokeapi y JS/HTML/CSS.
+El funcionamiento de este proyecto es buscar en la pokeapi el nombre del pokemon que sea ingresado y devolver el tipo, sus habilidades y una imagen.
 
 ## Autor ✒️
 **Maximo Garmasar Vazquez**
