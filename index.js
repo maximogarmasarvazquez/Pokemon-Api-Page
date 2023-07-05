@@ -2,6 +2,7 @@ const nombreInput = document.getElementById("nombre");
 const btnBuscar = document.getElementById("btn-buscar");
 const nombreLabel = document.getElementById("nombre-pokemon");
 const tipoLabel = document.getElementById("tipo-pokemon");
+const habilidadLabel = document.getElementById("habilidad-pokemon");
 const iconoPokemon = document.getElementById("icono-pokemon");
 
 btnBuscar.addEventListener("click", buscarDatosPoke);
@@ -14,9 +15,12 @@ function buscarDatosPoke() {
     .then(datos => {
       const nombrePokemon = datos.name;
       const tiposPokemon = datos.types.map(tipo => tipo.type.name).join(", ");
+      const habilidadesPokemon = datos.abilities.map(habilidad => habilidad.ability.name).join(", ");
+
       
       nombreLabel.textContent = `${nombrePokemon}`;
       tipoLabel.textContent = `Tipos:  ${tiposPokemon}`;
+      habilidadLabel.textContent = `Habilidades:  ${habilidadesPokemon}`;
       
       // Mostrar el icono del Pokémon
       const iconoPokemonURL = datos.sprites.front_default;
