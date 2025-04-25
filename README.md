@@ -11,7 +11,7 @@ El funcionamiento de este proyecto es buscar en la pokeapi el nombre del pokemon
 * [LinkedIn](https://www.linkedin.com/in/maximogarmasarvazquez/)
 
 ## ver ejemplo en vivo
-[https://maximogarmasarvazquez.github.io/Pokemon-Api-Page//](https://maximogarmasarvazquez.github.io/Pokemon-Api-Page/)
+[https://pokemon-api-page.netlify.app/](https://pokemon-api-page.netlify.app/)
 
 ## Contacto
 Si quieres contactarme puedes escribirme a maxivaz55@gmail.com para consultas.
