@@ -7,12 +7,9 @@ import CarrouselPokeCards from "@/components/reutilizables/CarrouselPokeCards";
 import PokeCard from "@/components/reutilizables/PokeCard";
 
 
-interface Props {
-  params: { nombre: string };
-}
 
-export default async function page({ params }: Props) {
-  const { nombre } = params;
+export default async function page ({ params }: { params: Promise<{ nombre: string }> }) {
+  const { nombre } = await  params;
 
   if (!nombre) return notFound();
 
