@@ -7,8 +7,6 @@ import CarrouselPokeCards from "@/components/reutilizables/CarrouselPokeCards";
 import PokeCard from "@/components/reutilizables/PokeCard";
 
 
-
-
 interface Props {
   params: { nombre: string };
 }
