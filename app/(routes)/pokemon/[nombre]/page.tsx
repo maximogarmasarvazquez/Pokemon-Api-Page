@@ -11,7 +11,7 @@ interface Props {
   params: { nombre: string };
 }
 
-export default async function DetallePage({ params }: Props) {
+export default async function page({ params }: Props) {
   const { nombre } = params;
 
   if (!nombre) return notFound();
