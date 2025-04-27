@@ -9,8 +9,7 @@ interface Props {
 
 function PokeList({pokemons} : Props) {
   return (
-    <div className="grid grid-cols-3 gap-4 p-4">
-        <h1>POKELISrt</h1>
+    <div className="grid grid-cols-4 items-center justify-center w-[80%] mx-auto gap-4 mt-10 mb-10">
       {pokemons.map((pokemon) => (
         <PokeCard key={pokemon.id} pokemon={pokemon} />
       ))}

@@ -29,7 +29,7 @@ function PokeCard({ pokemon }: Props) {
       {/* Nombre del Pokémon e ID */}
       <h1 className={clsx("text-xl font-bold flex flex-row", `text-${pokemon.types[0].type.name}`)}>
         <div className='items-start mr-10'>
-          <span className="text-gray-500 text-sm">#00{pokemon.id}</span>
+          <span className="text-gray-500 text-sm">#0{pokemon.id}</span>
         </div>
         <div className='items-end ml-7'>
           {pokemon.nombre}

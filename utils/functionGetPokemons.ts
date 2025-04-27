@@ -1,15 +1,21 @@
 import axios from 'axios';
 import { Pokemon, PokemonAPIResponse } from '@/ts/interfaces';
 
-export async function getPokemons(num: number): Promise<Pokemon[]> {
+interface GetPokemonsResponse {
+  pokemons: Pokemon[];
+  total: number;
+}
+
+export async function getPokemons(page: number = 1): Promise<GetPokemonsResponse> {
   try {
-    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${num}`);
+    const limit = 20; // 20 pokémon por página
+    const offset = (page - 1) * limit;
+
+    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
     const results = response.data.results;
-    console.log("responseve",response);
+    const total = response.data.count; // <- 🔥 Aca capturamos el total de pokémon disponibles
 
-    console.log("results",results);
     const detailedPromises = results.map((p: { url: string }) => axios.get<PokemonAPIResponse>(p.url));
-
     const detailedResponses = await Promise.all(detailedPromises);
 
     const formattedData: Pokemon[] = detailedResponses.map((res) => {
@@ -35,9 +41,9 @@ export async function getPokemons(num: number): Promise<Pokemon[]> {
       };
     });
 
-    return formattedData;
+    return { pokemons: formattedData, total };
   } catch (error) {
     console.error("Error fetching pokemons", error);
-    return [];
+    return { pokemons: [], total: 0 };
   }
 }
