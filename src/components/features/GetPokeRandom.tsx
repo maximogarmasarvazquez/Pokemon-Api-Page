@@ -18,9 +18,6 @@ const getPokemonData = async (id: number): Promise<Pokemon> => {
     types: data.types,
     imagenes: {
       front_default: data.sprites.front_default,
-      back_default: data.sprites.back_default,
-      back_female: data.sprites.back_female,
-      back_shiny: data.sprites.back_shiny,
     },
     habilidades: data.abilities.map((item) => ({
       habilidad: {
