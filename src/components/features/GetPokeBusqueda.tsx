@@ -1,5 +1,5 @@
-import NoResults from '@/components/ui/NoResults';
-import PokeCard from '@/components/reutilizables/PokeCard';
+import NoResults from '@/src/components/ui/NoResults';
+import PokeCard from '@/src/components/reutilizables/PokeCard';
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';

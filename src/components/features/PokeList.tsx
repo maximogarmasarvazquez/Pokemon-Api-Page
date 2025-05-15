@@ -1,6 +1,6 @@
 import React from 'react'
 import PokeCard from '../reutilizables/PokeCard'
-import { Pokemon } from '@/ts/interfaces'
+import { Pokemon } from '@/src/ts/interfaces'
 
 interface Props {
     pokemons: Pokemon[];

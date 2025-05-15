@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Pokemon } from "@/ts/interfaces";
+import { Pokemon } from "@/src/ts/interfaces";
 import GetPokeRandom from "./GetPokeRandom";
 import { FaArrowsRotate } from "react-icons/fa6";
 import CarrouselPokeCards from "../reutilizables/CarrouselPokeCards"; // Adjust the path if necessary

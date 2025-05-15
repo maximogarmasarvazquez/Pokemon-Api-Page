@@ -1,7 +1,7 @@
-import MostrarComparador from "@/components/features/MostrarComparador";
-import MostrarPokedex from "@/components/features/MostrarPokedex";
-import Buscador from "@/components/ui/Buscador";
-import Header from "@/components/ui/Header";
+import MostrarComparador from "@/src/components/features/MostrarComparador";
+import MostrarPokedex from "@/src/components/features/MostrarPokedex";
+import Buscador from "@/src/components/ui/Buscador";
+import Header from "@/src/components/ui/Header";
 import Link from "next/link";
 
 export default function Home() {

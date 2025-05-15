@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Pokemon } from "@/ts/interfaces";
+import { Pokemon } from "@/src/ts/interfaces";
 import GetPokeRandom from "./GetPokeRandom";
 import Comparador from "../reutilizables/Comparador";
 import { FaArrowsRotate } from "react-icons/fa6";

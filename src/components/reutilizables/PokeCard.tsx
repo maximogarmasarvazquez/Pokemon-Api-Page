@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { Pokemon } from '@/ts/interfaces';
+import { Pokemon } from '@/src/ts/interfaces';
 import clsx from 'clsx';
-import { StarIcon } from 'lucide-react';
+import {  StarIcon } from 'lucide-react';
+import Link from 'next/link';
 
 interface Props {
   pokemon: Pokemon;
@@ -13,15 +13,12 @@ interface Props {
 
 function PokeCard({ pokemon }: Props) {
   const [isFavorite, setIsFavorite] = useState(false);
-  const router = useRouter();
 
   const toggleFavorite = () => {
     setIsFavorite(!isFavorite);
   };
 
-  const handleClick = () => {
-    router.push(`/pokemon/${pokemon.nombre}`);
-  };
+
 
   return (
     <div className="flex flex-col w-full items-center p-4 m-2 rounded-lg shadow-lg border border-gray-300 sm:w-60 bg-white">
@@ -43,6 +40,7 @@ function PokeCard({ pokemon }: Props) {
           alt={pokemon.nombre}
           fill
           className="object-contain"
+          
         />
       </div>
 
@@ -93,12 +91,12 @@ function PokeCard({ pokemon }: Props) {
       </div>
 
       {/* Botón Ver más */}
-      <button
-        onClick={handleClick}
+      <Link
+        href={`/pokemon/${pokemon.nombre}`}
         className="mt-4 w-full flex items-center justify-center bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition"
       >
         Ver más
-      </button>
+      </Link>
     </div>
   );
 }

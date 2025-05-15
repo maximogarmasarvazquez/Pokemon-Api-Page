@@ -1,4 +1,4 @@
-import GetPokeList from '@/components/features/GetPokeList'
+import GetPokeList from '@/src/components/features/GetPokeList'
 import React from 'react'
 
 function page() {

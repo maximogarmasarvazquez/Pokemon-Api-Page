@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pokemon } from '@/ts/interfaces';
+import { Pokemon } from '@/src/ts/interfaces';
 import { ArrowUp, ArrowDown } from 'lucide-react';
 
 interface StatsComparateProps {

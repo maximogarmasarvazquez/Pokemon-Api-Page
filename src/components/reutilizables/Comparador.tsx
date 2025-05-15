@@ -1,4 +1,4 @@
-import { Pokemon } from '@/ts/interfaces';
+import { Pokemon } from '@/src/ts/interfaces';
 import { useState } from 'react';
 import PokeCard from './PokeCard';
 import StatsComparate from '../features/StatsComparate';

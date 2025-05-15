@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import PokeCard from '../reutilizables/PokeCard';
-import { Pokemon } from '@/ts/interfaces';
+import PokeCard from './PokeCard';
+import { Pokemon } from '@/src/ts/interfaces';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';

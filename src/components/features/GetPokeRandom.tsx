@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { Pokemon, PokemonAPIResponse } from "@/ts/interfaces";
+import { Pokemon, PokemonAPIResponse } from "@/src/ts/interfaces";
 
 interface Props {
   cantidad: number;

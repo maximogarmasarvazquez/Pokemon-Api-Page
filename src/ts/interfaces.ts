@@ -7,9 +7,7 @@ export interface PokemonType {
 }
 
 export interface PokemonImg {
-  back_default: string;
-  back_female: string;
-  back_shiny: string;
+
   front_default: string;
 }
 
